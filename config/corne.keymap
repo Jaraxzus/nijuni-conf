@@ -92,9 +92,9 @@
 // |     |  N  |  M  |     |  ,  |  .  |   |     |     |     |     |     |      |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &kp Y &trans &trans &kp O   &kp P    &trans &trans     &trans &trans &trans &trans &trans
+   &trans &kp Y &trans &trans &kp O   &kp P    &trans &trans     &trans &trans &trans &trans
    &trans &kp H &trans &trans &kp L   &kp SEMI &trans &tog GAME1 &trans &trans &trans &trans
-   &trans &kp N &trans &trans &kp DOT &kp FSLH &trans &trans     &trans &trans &trans &trans &trans
+   &trans &kp N &trans &trans &kp DOT &kp FSLH &trans &trans     &trans &trans &trans &trans
                        &trans &trans  &trans   &trans &trans     &trans
                         >;
                 };
