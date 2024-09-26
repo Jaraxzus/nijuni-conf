@@ -11,8 +11,6 @@
 #define LOWER 1
 #define RAISE 2
 #define BLTH 3
-#define GAME1 4
-#define GAME2 5
 
 / {
         keymap {
@@ -36,13 +34,13 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |      |     | HOME| DEL |PSCRN| CLCK|   | LFT | DWN |  UP | RGT |     | CTRL |
-// | SHFT | GM  |     |     |     | BT  |   |     |     |     |     |     | SHFT |
+// | SHFT |     |     |     |     | BT  |   |     |     |     |     |     | SHFT |
 //                    | GUI |     | SPC |   | ENT | GUI | ALT |
                         bindings = <
-   &kp TAB   &kp N1     &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7   &kp N8   &kp N9    &kp N0 &kp BSPC
-   &trans    &trans     &kp HOME &kp DEL  &kp PSCRN &kp CAPS  &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &kp RCTRL
-   &kp LSHFT &tog GAME1 &trans   &trans   &trans    &mo BLTH  &trans   &trans   &trans   &trans    &trans &kp RSHFT
-                                 &kp LGUI &trans    &kp SPACE &kp RET  &kp LGUI &kp RALT
+   &kp TAB   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7   &kp N8   &kp N9    &kp N0 &kp BSPC
+   &trans    &trans &kp HOME &kp DEL  &kp PSCRN &kp CAPS  &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &kp RCTRL
+   &kp LSHFT &trans &trans   &trans   &trans    &mo BLTH  &trans   &trans   &trans   &trans    &trans &kp RSHFT
+                             &kp LGUI &trans    &kp SPACE &kp RET  &kp LGUI &kp RALT
                         >;
                 };
                 raise_layer {
@@ -70,32 +68,6 @@
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans    &trans  &trans &trans  &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans       &trans    &trans  &trans &trans  &trans &trans
                                                      &kp LGUI     &trans       &kp SPACE &kp RET &trans &kp RALT
-                        >;
-                };
-                ge_one{
-// -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  | GE2 |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |RSHFT |
-//                    |  S  | ALT | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp ESC   &kp Q &kp W     &kp E &kp R    &kp T     &kp Y   &kp U     &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &mo GAME2 &kp D &kp F    &kp G     &kp H   &kp J     &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X     &kp C &kp V    &kp B     &kp N   &kp M     &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                             &kp S &kp LALT &kp SPACE &kp RET &mo RAISE &kp RALT
-                        >;
-                };
-                ge_two{
-// -----------------------------------------------------------------------------------------
-// |     |  Y  |  U  |     |  O  |  P  |   |     |     |     |     |     |      |
-// |     |  H  |     |     |  L  |  ;  |   |     | TOG |     |     |     |      |
-// |     |  N  |  M  |     |  ,  |  .  |   |     |     |     |     |     |      |
-//                   |     |     |     |   |     |     |     |
-                        bindings = <
-   &trans &kp Y &trans &trans &kp O   &kp P    &trans &trans     &trans &trans &trans &trans
-   &trans &kp H &trans &trans &kp L   &kp SEMI &trans &tog GAME1 &trans &trans &trans &trans
-   &trans &kp N &trans &trans &kp DOT &kp FSLH &trans &trans     &trans &trans &trans &trans
-                       &trans &trans  &trans   &trans &trans     &trans
                         >;
                 };
         };
